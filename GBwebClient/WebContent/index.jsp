@@ -19,9 +19,11 @@ pageEncoding="ISO-8859-1"%>
 	
 <form id="formItem" name="formItem">
 
+<%--
 	 Product ID:
 	 <input id="ProductID" name="ProductID" type="text"
-	 class="form-control form-control-sm">
+	 class="form-control form-control-sm"> 
+ --%>
 	 
 	 <br> Product Name:
 	 <input id="ProductName" name="ProductName" type="text"

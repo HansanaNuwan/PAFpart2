@@ -77,7 +77,7 @@ function onItemSaveComplete(response, status)
 $(document).on("click", ".btnUpdate", function(event)
 		{
 		$("#hidItemIDSave").val($(this).data("ProductID"));
-		$("#ProductID").val($(this).closest("tr").find('td:eq(0)').text());
+		//$("#ProductID").val($(this).closest("tr").find('td:eq(0)').text());
 		 $("#ProductName").val($(this).closest("tr").find('td:eq(1)').text());
 		 $("#ProductDesc").val($(this).closest("tr").find('td:eq(2)').text());
 		 $("#ProductReg").val($(this).closest("tr").find('td:eq(3)').text());
@@ -91,7 +91,7 @@ $(document).on("click", ".btnRemove", function(event)
 		 {
 		 url : "ItemsAPI",
 		 type : "DELETE",
-		 data : "ProductID=" + $(this).data("ProductID"),
+		 data : "ProductID=" + $(this).data("itemid"),
 		 dataType : "text",
 		 complete : function(response, status)
 		 {

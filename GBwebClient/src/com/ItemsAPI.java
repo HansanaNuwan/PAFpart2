@@ -35,7 +35,6 @@ public class ItemsAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -110,7 +109,9 @@ public class ItemsAPI extends HttpServlet {
 			 Map paras = getParasMap(request);
 			 
 			 String output = itemObj.deleteItem(paras.get("ProductID").toString());
+			 
 			response.getWriter().write(output);
+			
 			}
 
 

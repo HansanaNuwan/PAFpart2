@@ -55,8 +55,8 @@ public String readItems()
 		 String InventorID = rs.getString("InventorID");
 		 
 		 // Add into the html table
-		 //output+="<tr><td><input id= 'hidItemIDUpdate' name='hidItemIDUpdate' type ='hideen' value='" + ProductID + "'>" + ProductID + "</td>";
-		 output += "<tr><td>" + ProductID + "</td>";
+		 output+="<tr><td><input id= 'hidItemIDUpdate' name='hidItemIDUpdate' type ='hidden' value='" + ProductID + "'>" + ProductID + "</td>";
+		 //output += "<tr><td>" + ProductID + "</td>";
 		 output += "<td>" + ProductName + "</td>";
 		 output += "<td>" + ProductDesc + "</td>";
 		 output += "<td>" + ProductReg + "</td>";
