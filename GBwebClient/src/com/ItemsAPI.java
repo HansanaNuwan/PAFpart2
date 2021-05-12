@@ -46,7 +46,7 @@ public class ItemsAPI extends HttpServlet {
 			 String output = itemObj.insertItem(request.getParameter("ProductName"),
 			 request.getParameter("ProductDesc"),
 			 request.getParameter("ProductReg"),
-			 request.getParameter("ProductPrice"),                 //request.getParameter("ProductName"),
+			 request.getParameter("ProductPrice"),                 
 			 request.getParameter("InventorID"));
 			 
 			 response.getWriter().write(output);
@@ -85,11 +85,10 @@ public class ItemsAPI extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
-	protected void doPut(HttpServletRequest request, HttpServletResponse response)
+protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			 throws ServletException, IOException
 			 
-			{
-		
+{		
 			 Map paras = getParasMap(request);
 			 
 			 String output = itemObj.updateItem(paras.get("hidItemIDSave").toString(),
@@ -101,7 +100,7 @@ public class ItemsAPI extends HttpServlet {
 			 
 			response.getWriter().write(output);
 			
-			}
+}
 	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			 throws ServletException, IOException

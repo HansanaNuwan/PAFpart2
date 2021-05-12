@@ -56,7 +56,6 @@ public String readItems()
 		 
 		 // Add into the html table
 		 output+="<tr><td><input id= 'hidItemIDUpdate' name='hidItemIDUpdate' type ='hidden' value='" + ProductID + "'>" + ProductID + "</td>";
-		 //output += "<tr><td>" + ProductID + "</td>";
 		 output += "<td>" + ProductName + "</td>";
 		 output += "<td>" + ProductDesc + "</td>";
 		 output += "<td>" + ProductReg + "</td>";
@@ -141,7 +140,7 @@ public String updateItem( String ProductID, String ProductName, String ProductDe
 		 }
 		 
 		 // create a prepared statement
-		 String query = "UPDATE products SET ProductID=?,ProductName=?,ProductDesc=?,ProductReg=?,ProductPrice=?,InventorID=? WHERE ProductID=?";
+		 String query = "UPDATE products SET ProductName=?,ProductDesc=?,ProductReg=?,ProductPrice=?,InventorID=? WHERE ProductID=?";
 		 PreparedStatement preparedStmt = con.prepareStatement(query);
 		 
 		 // binding values
@@ -150,8 +149,7 @@ public String updateItem( String ProductID, String ProductName, String ProductDe
 		 preparedStmt.setString(3, ProductReg);
 		 preparedStmt.setString(4, ProductPrice);
 		 preparedStmt.setString(5, InventorID);
-		 preparedStmt.setInt(6, Integer.parseInt(ProductID));
-		 
+		 preparedStmt.setInt(6, Integer.parseInt(ProductID));		 
 		 // execute the statement
 		 preparedStmt.execute();
 		 con.close();
